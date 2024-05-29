@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.1.3]
+
+### Fixed
+
+- Log breakpoint format error
+
 ## [0.1.2]
 
 ### Fixed
