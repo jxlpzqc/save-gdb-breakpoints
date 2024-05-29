@@ -2,6 +2,7 @@
   "name": "save-gdb-breakpoints",
   "displayName": "save-gdb-breakpoints",
   "description": "Save breakpoints to a gdb file",
+  "publisher": "chengzi",
   "homepage": "https://github.com/jxlpzqc/save-gdb-breakpoints",
   "repository": {
     "type": "git",
