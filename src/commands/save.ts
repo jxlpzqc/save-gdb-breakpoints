@@ -108,12 +108,15 @@ function generateGDBCommand(pos: string, condition?: string, logMessage?: string
 
         while (match = re.exec(logMessage)) {
             const idx = match.index;
+            const fmt = match[3];
             logCommand += escapeQuotes(logMessage.substring(last, idx));
+            logCommand += `{}`;
 
-            if (match[3]) logCommand += `{:${match[3]}}`;
-            else logCommand += `{}`;
-
-            fmtArgs.push(`gdb.parse_and_eval('${match[1]}')`);
+            let arg = `gdb.parse_and_eval('${match[1]}')`;
+            if (fmt) {
+                arg += `.format_string('${fmt}')`;
+            }
+            fmtArgs.push(arg);
             last = idx + match[0].length;
         }
         logCommand += escapeQuotes(logMessage.substring(last));
