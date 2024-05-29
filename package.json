@@ -1,6 +1,7 @@
 {
   "name": "save-gdb-breakpoints",
-  "displayName": "save-gdb-breakpoints",
+  "displayName": "Save GDB Breakpoints",
+  "icon": "assets/icon.png",
   "description": "Save breakpoints to a gdb file",
   "publisher": "chengzi",
   "homepage": "https://github.com/jxlpzqc/save-gdb-breakpoints",
