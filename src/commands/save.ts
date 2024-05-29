@@ -96,9 +96,9 @@ function generateGDBCommand(pos: string, condition?: string, logMessage?: string
 
     if (logMessage) {
         let logCommand = "\ncommands\n";
-        logCommand += `\tsilent\n`;
-        logCommand += `\tpython\n`;
-        logCommand += `\t\tprint("`;
+        logCommand += `silent\n`;
+        logCommand += `python\n`;
+        logCommand += `print("`;
 
         let last = 0;
         let match: RegExpExecArray | null;
@@ -119,8 +119,10 @@ function generateGDBCommand(pos: string, condition?: string, logMessage?: string
         logCommand += escapeQuotes(logMessage.substring(last));
         logCommand += `".format(${fmtArgs.join(", ")})`;
         logCommand += `)\n`;
-        logCommand += `\tend\n`;
-        logCommand += `end`;
+        logCommand += `end\n`;
+        logCommand += `continue\n`;
+        logCommand += `end\n`;
+        logCommand += `# end of breakpoint: ${pos}`
         command += logCommand;
     }
 
