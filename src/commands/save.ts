@@ -114,7 +114,7 @@ function generateGDBCommand(pos: string, condition?: string, logMessage?: string
 
             let arg = `gdb.parse_and_eval('${match[1]}')`;
             if (fmt) {
-                arg += `.format_string('${fmt}')`;
+                arg += `.format_string(format='${fmt}')`;
             }
             fmtArgs.push(arg);
             last = idx + match[0].length;
