@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.1.2]
+
+### Fixed
+
+- Python indentation error
+- Log breakpoint does not continue
+
 ## [0.1.1]
 
 ### Changed
